@@ -9,8 +9,12 @@ const App = () => {
     let finish = "Hi, I'm Gosha";
     
     const addletter = () => setTimeout(() => {
-        setTitle(finish[title.length]);
+        setTitle(title+finish[title.length]);
+        
+
+        title !== finish && addletter();
     }, Math.floor(Math.random()*175)+175);
+    addletter();
 
     
     
