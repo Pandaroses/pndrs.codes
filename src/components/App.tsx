@@ -5,12 +5,14 @@ import React, { useState } from "react"
 const App = () => {
     const [title,setTitle] = useState("");
     const [underscore,setUnderscore] = useState(false);
-    setInterval(() => setUnderscore(!underscore),40000)
+    setInterval(() => setUnderscore(!underscore),40)
     let finish = "Hi, I'm Gosha";
     
-    const addletter = setInterval(() => {
-        setTitle(finish);
-    }, Math.random()*1000)   
+    const addletter = setTimeout(() => {
+        setTitle(finish[title.length]);
+        
+    }, Math.floor(Math.random()*175)+175)   ;
+    
     
     
     return (
