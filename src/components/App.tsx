@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
  
 
 
@@ -9,12 +9,18 @@ const App = () => {
     let finish = "Hi, I'm Gosha";
     
     const addletter = () => setTimeout(() => {
-        setTitle(title+finish[title.length]);
+        setTitle(title =>title+finish[title.length]);
         
-
+        
         title !== finish && addletter();
-    }, Math.floor(Math.random()*175)+175);
-    addletter();
+    }, 900);
+    
+    useEffect(() => {
+        addletter();
+    }); 
+    
+   
+    
 
     
     
@@ -27,6 +33,7 @@ const App = () => {
             </div>
             <div className="border-2 rounded-lg border-lavender basis-3/4 align-center  text-center h-96 w-4/12">
                 <h1 className="text-teal text-6xl pt-4 ">{title+(underscore ? "_" : "")}</h1>
+                
             </div>
             <div className=" basis-2/12">
 
@@ -39,3 +46,4 @@ const App = () => {
 }
 
 export default App;
+
