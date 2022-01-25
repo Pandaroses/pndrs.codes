@@ -20,6 +20,21 @@ module.exports = {
     fontFamily: {
       "body": ["JetBrains Mono", "sans-serif"],
     },
+    extend: {
+      animation:{
+        'fade-1': 'fadein 4s ease',
+        'fade-2': 'fadein 5s ease',
+        'fade-3': 'fadein 6s ease',
+        'fade-4': 'fadein 7s ease'
+      },
+
+      keyframes: theme => ({
+        fadein: {
+          '0%': {opacity: 0},
+          '100%': { opacity:1 },
+        },
+      }),
+    }
   },
   plugins: [],
 }
