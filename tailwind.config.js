@@ -2,36 +2,45 @@ module.exports = {
   content: ["./src/**/*.tsx"],
     theme: {
       colors: {
-        "black": {
-          0: "#131020",
-          1: "#1a1823",
-          2: "#1e1d2f",
-          3: "#302d41"
+        "polar": {
+          "0": "#2E3440",
+          "1": "#3B4252",
+          "2": "#434C5E",
+          "3": "#4C566A",
         },
-        "white": "#d9e0ee",
-        "red": "#f28fad",
-        "peach": "#f8bd96",
-        "yellow": "#fae3b0",
-        "green": "#abe9b3",
-        "teal": "#b5e8e0",
-        "blue": "#96cdfb",
-        "lavender": "#c9cbff"
+        "snow":{
+          "0": "#D8DEE9",
+          "1": "#E5E9F0",
+          "2": "#ECEFF4",
+        },
+        "frost": {
+          "0": "#8FBCBB",
+          "1": "#88C0D0",
+          "2": "#81A1C1",
+          "3": "#5E81AC"
+        },
+        "red": "#BF616A",
+        "orange": "#D08770",
+        "yellow": "#EBCB8B",
+        "green": "#A3BE8C",
+        "purple": "#B48EAD",
+        "black": "#000"
       },
     fontFamily: {
       "body": ["JetBrains Mono", "sans-serif"],
     },
     extend: {
       animation:{
-        'fade-1': 'fadein 4s ease',
-        'fade-2': 'fadein 5s ease',
-        'fade-3': 'fadein 6s ease',
-        'fade-4': 'fadein 7s ease'
+        'fade-1': 'fadein 4s ease-in-out',
+        
       },
 
+    
       keyframes: theme => ({
         fadein: {
           '0%': {opacity: 0},
           '100%': { opacity:1 },
+        
         },
       }),
     }
