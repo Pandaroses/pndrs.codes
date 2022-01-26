@@ -29,9 +29,9 @@ const App = () => {
     return (
         <div className=" bg-polar-0 h-screen w-screen flex flex-col flex-nowrap justify-self-center items-center content-center  ">
             <div className="basis-1/12"></div>
-            <div className={"border-4 rounded-lg border-frost-1 basis-3/4 align-center h-96 w-4/12 flex flex-col items-center content-center " + (flip === true? side === true? "flip-horizontal-bottom-reverse" : "flip-horizontal-bottom" : side === true? "stayup" : "staydown")} onClick={() => {setFlip(flip => !flip);  setTimeout(() => {setFlip(flip =>!flip)},700);  setSide(side => !side)}}>
+            <div className={"border-4 rounded-lg border-frost-1 basis-3/4 align-center h-96 w-4/12 flex flex-col items-center content-center " + (flip? side? "flip-horizontal-bottom-reverse" : "flip-horizontal-bottom" : side ? "stayup" : "staydown")} onClick={() => {setFlip(flip => !flip);  setTimeout(() => {setFlip(flip =>!flip)},700);  setSide(side => !side)}}>
                 <h1 className="text-snow-0 text-6xl pt-4 basis-2/12 hover:animate-pulse self-start pl-4">{title+(underscore ? "|" : "")}</h1>
-                <p className="text-snow-0 text-4xl font-bold hover:animate-spin self-start pl-4">what i do</p>
+                <p className="text-snow-0 text-4xl font-bold hover:animate-spin self-start pl-4">What I Do</p>
                 <ul className="text-snow-0 text-3xl align-left pl-12 list-disc self-start">
                     <li className="animate-fade-1 animate-delay-1">code very dumb stuff</li>
                     <li className="animate-fade-1 animate-delay-3">be confused</li>
