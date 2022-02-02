@@ -1,7 +1,6 @@
 {
   "name": "pndrs_codes",
   "version": "1.0.0",
-  "main": "index.js",
   "license": "MIT",
   "devDependencies": {
     "@types/react": "^17.0.38",
@@ -10,6 +9,7 @@
     "parcel": "^2.2.1",
     "postcss": "^8.4.5",
     "prettier": "^2.5.1",
+    "push-dir": "^0.4.1",
     "tailwindcss": "^3.0.15"
   },
   "dependencies": {
@@ -23,6 +23,7 @@
     "start": "parcel serve ./src/index.html --open",
     "dev": "parcel src/index.html",
     "build": "parcel build --dist-dir dist src/index.html",
-    "clean": "rm -rf .parcel-cache dist"
+    "clean": "rm -rf .parcel-cache dist",
+    "deploy": "push-dir --dir=dist --branch=gh-pages"
   }
 }
