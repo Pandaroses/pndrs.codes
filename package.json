@@ -24,6 +24,7 @@
     "dev": "parcel src/index.html",
     "build": "parcel build --dist-dir dist src/index.html",
     "clean": "rm -rf .parcel-cache dist",
-    "deploy": "push-dir --dir=dist --branch=gh-pages"
+    "deploy": "push-dir --dir=dist --branch=gh-pages",
+    "pretty": "prettier src --write"
   }
 }
